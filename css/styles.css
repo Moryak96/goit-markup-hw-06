@@ -1,4 +1,4 @@
-/* +++++ General STYLES */
+/* +++ General STYLES +++ */
 .list {
     list-style-type: none;
 }
@@ -69,7 +69,7 @@ body {
     text-decoration: none;
 }
 
-/* Header Mobile Styles (HMS) */
+/* +++ Header Mobile Styles (HMS) +++ */
 
 .page {
     display: none;
@@ -103,7 +103,7 @@ body {
     color: #2E2F42;
 }
 
-/* Mobile Media */
+/* +++ Mobile Media +++ */
 
 @media (max-width: 767px) {
 
@@ -222,3 +222,244 @@ body {
         fill: #F4F4FD;
     }
 }
+
+
+/* +++ Header Tablet Styles (HTS) +++ */
+
+ @media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .mobile-menu-open-btn {
+        display: none;
+    }
+
+    .mobile-menu-wrapper {
+        display: none;
+    }
+
+    .page {
+        display: flex;
+        gap: 40px;
+    }
+
+    .head-logo {
+        margin-right: 120px;
+    }
+
+    .address-title {
+        display: flex;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-list {
+        color: #2E2F42;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .menu-list:hover,
+    .menu-list:focus {
+        color: #404BBF;
+    }
+
+    .address-title {
+        font-style: normal;
+    }
+
+    .data-list {
+        padding-bottom: 12px;
+    }
+
+    .data {
+        color: #434455;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .studio-menu-list {
+        position: relative;
+        color: #404bbf;
+    }
+
+    .studio-menu-list::after {
+        content: '';
+        width: 48px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #404BBF;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+    }
+} 
+
+
+/* +++ Header Desktop Styles (HDS) +++ */
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
+
+    .header-logo {
+        margin-right: 76px;
+    }
+
+    .main-data {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .studio-menu-list::after {
+        bottom: 2px;
+    }
+}
+
+/* +++ Section 1 (Mobile) +++ */
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.section-one {
+    background-color: #2E2F42;
+    padding: 72px 0;
+    background-image: linear-gradient(
+    rgba(46, 47, 66, 0.70),
+    rgba(46, 47, 66, 0.70)), 
+    url(../images/party-mobile.jpg);
+    background-size: cover;
+    max-width: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-raito: 2) {
+    .section-one {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)), 
+        url(../images/party-desktop@2x.jpg);
+    }
+}
+
+.section-one-title {
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    max-width: 165px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+}
+
+.section-one-button {
+    display: block;
+    background-color: #4D5AE5;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 16px 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* +++ Section 1 (Tablet) +++ */
+
+@media screen and (min-width: 768px) {
+    .section-main-title {
+        padding: 112px 0;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)), 
+            url(../images/party-tablet.jpg);
+        max-width: 768px;
+    }
+
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-raito: 2) {
+        .section-main-title {
+            background-image: linear-gradient(
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)), 
+            url(../images/party-tablet@2x.jpg);
+        }
+    }
+
+    .section-one-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
+        text-transform: none;
+    }
+}
+
+/* +++ Section 1 (Desktop) */
+
+@media screen and (min-width: 1158px) {
+    .section-one {
+        padding: 120px 0;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)), 
+            url(../images/party-desktop.jpg);
+        max-width: 1440px;
+    }
+
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-raito: 2) {
+        .section-one {
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.70),
+                rgba(46, 47, 66, 0.70)),
+                url(../images/party-desktop@2x.jpg);
+        }
+    }
+
+    .sction-one-title {
+        margin-bottom: 48px;
+    }
+
+    .section-one-button {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .section-one-button:hover,
+    .section-one-button:focus {
+        background-color: #404BBF;
+    }
+}
+

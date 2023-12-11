@@ -150,6 +150,11 @@ img {
 
 /* Section 1 */
 
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .section-one {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/party.jpg);
     flex-shrink: 0;

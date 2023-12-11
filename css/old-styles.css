@@ -593,7 +593,7 @@ background-color: #31d0aa;
 
 /* Backdrop area */
 
-.open {
+.backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;

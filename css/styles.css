@@ -70,7 +70,7 @@ body {
     text-decoration: none;
 }
 
-/* +++ Header Mobile Styles (HMS) +++ */
+/* +++ Header Mobile (HMS) +++ */
 
 .page {
     display: none;
@@ -104,7 +104,7 @@ body {
     color: #2E2F42;
 }
 
-/* +++ Mobile Media +++ */
+/* +++ Mobile Media (modal) +++ */
 
 @media (max-width: 767px) {
 
@@ -232,7 +232,7 @@ body {
 }
 
 
-/* +++ Header Tablet Styles (HTS) +++ */
+/* +++ Header Tablet (HTS) +++ */
 
  @media screen and (min-width: 768px) {
     .container {
@@ -316,7 +316,7 @@ body {
 } 
 
 
-/* +++ Header Desktop Styles (HDS) +++ */
+/* +++ Header Desktop (HDS) +++ */
 
 @media screen and (min-width: 1158px) {
     .container {
@@ -334,9 +334,9 @@ body {
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .main-data {
+    .page-adress {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
         gap: 40px;
     }
 
@@ -470,7 +470,7 @@ screen and (min-device-pixel-raito: 2) {
         }
     }
 
-    .sction-one-title {
+    .section-one-title {
         margin-bottom: 48px;
     }
 
@@ -531,12 +531,12 @@ screen and (min-device-pixel-raito: 2) {
     }
 
     .section-two-items {
-        width: calc((100%-72px)/4);
+        flex-basis: calc((100% - 24px) / 2);
     }
 
     .section-two-title {
         width: 264px;
-        text-align: start;
+        text-align: left;
     }
 
     .section-two-p {
@@ -562,6 +562,7 @@ screen and (min-device-pixel-raito: 2) {
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
+        letter-spacing: 0.02em;
     }
 
     .two {
@@ -578,7 +579,6 @@ screen and (min-device-pixel-raito: 2) {
         justify-content: center;
         width: 264px;
         height: 112px;
-        flex-shrink: 0;
         border-radius: 4px;
         border: 1px solid #8e8f99;
         background: #F4F4FD;
@@ -616,7 +616,7 @@ screen and (min-device-pixel-raito: 2) {
 .our-team-title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .section-three-list {
@@ -681,3 +681,69 @@ screen and (min-device-pixel-raito: 2) {
     margin: 12px;
     fill: #F4F4FD;
 }
+
+/* +++ Section 3 (Tablet) */
+
+@media screen and (min-width: 768px) {
+    .section-four-portfolio {
+        gap: 24px;
+        row-gap: 64px;
+    }
+
+    .section-four-items {
+        margin-bottom: 0;
+    }
+
+}
+
+/* +++ Section 3 (Desktop) */
+
+@media screen and (min-width: 1158px) {
+    .our-team-title {
+        flex-wrap: nowrap;
+    }
+
+    .icon-item {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .icon-item:hover,
+    .icon-item:focus {
+        background-color: #404BBF;
+    }
+}
+
+/* +++ Section 4 (Mobile) */
+
+.box-content {
+    display: none;
+}
+
+.section-four-title {
+    margin-bottom: 72px;
+}
+
+.section-four-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+}
+
+.applications {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
+.section-four-list-item {
+    margin-bottom: 8px;
+    text-align: start;
+}
+
+.section-four-items {
+    width: 288px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* Мобильную версию 4 сектора закончил, (стили) начинаю с html 4 сектора завтра !!! НЕ ЗАБЫТЬ ЗА ФОТО !!! */

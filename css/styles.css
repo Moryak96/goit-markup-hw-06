@@ -23,6 +23,7 @@ ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    list-style: none;
 }
 
 button {
@@ -132,7 +133,10 @@ body {
     }
 
     .mobile-menu-container {
+        display: flex;
         position: relative;
+        flex-direction: column;
+        padding: 72px 24px 40px 16px;
     }
 
     .mobile-menu-close-btn {
@@ -152,13 +156,17 @@ body {
         fill: #2E2F42;
         }
 
-    .mobile-menu-nav {
-        padding-top: 72px;
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: auto;
     }
 
-    .mobile-menu-item {
-        margin-bottom: 40px;
-    }
+    .mobile-contacts-media {
+       margin-top: auto;
+   }
 
     .mobile-menu-link {
         color: #2E2F42;
@@ -319,6 +327,13 @@ body {
         margin-right: 76px;
     }
 
+    .data {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     .main-data {
         display: flex;
         justify-content: space-between;
@@ -326,7 +341,7 @@ body {
     }
 
     .studio-menu-list::after {
-        bottom: 2px;
+        bottom: -1px;
     }
 }
 
@@ -358,7 +373,7 @@ screen and (min-device-pixel-raito: 2) {
         background-image: linear-gradient(
         rgba(46, 47, 66, 0.70),
         rgba(46, 47, 66, 0.70)), 
-        url(../images/party-desktop@2x.jpg);
+        url(../images/party-mobile@2x.jpg);
     }
 }
 
@@ -429,8 +444,14 @@ screen and (min-device-pixel-raito: 2) {
 /* +++ Section 1 (Desktop) */
 
 @media screen and (min-width: 1158px) {
+
+    .section {
+        margin-bottom: 120px;
+        margin-top: 120px;
+    }
+
     .section-one {
-        padding: 120px 0;
+        padding: 188px 0;
         background-image: linear-gradient(
             rgba(46, 47, 66, 0.70),
             rgba(46, 47, 66, 0.70)), 
@@ -463,3 +484,200 @@ screen and (min-device-pixel-raito: 2) {
     }
 }
 
+/* +++ Section 2 (Mobile) */
+
+.icon-list {
+    display: none;
+}
+
+.section-two-title {
+    margin-bottom: 8px;
+    align-self: stretch;
+    color: #2E2F42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    width: 288px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.two {
+    color: #434455;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.section-two-items {
+    width: 288px;
+    margin-bottom: 72px;
+}
+
+.last-items{
+    margin-bottom: 0;
+}
+
+/* +++ Section 2 (Tablet) */
+
+@media screen and (min-width: 768px) {
+
+    .section-title-two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .section-two-items {
+        width: calc((100%-72px)/4);
+    }
+
+    .section-two-title {
+        width: 264px;
+        text-align: start;
+    }
+
+    .section-two-p {
+        width: 356px;
+    }
+}
+
+/* Section 2 (Desktop) */
+
+@media screen and (min-width: 1158px) {
+    .icon-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .section-title-two {
+        flex-wrap: nowrap;
+        row-gap: 0;
+    }
+
+    .section-two-title {
+        width: 264px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .two {
+        font-weight: 400;
+    }
+
+    .sections-two-p {
+        width: 264px;
+    }
+
+    .icon-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 264px;
+        height: 112px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        background: #F4F4FD;
+        margin-bottom: 8px;
+    }
+
+    .icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+/* +++ Section 3 (Mobile) +++ */
+
+.section-three {
+    background-color: #F4F4FD;
+}
+
+.our-team {
+    color: #2E2F42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.section-three-title {
+    margin-bottom: 72px;
+}
+
+.our-team-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-three-list {
+    border-radius: 0px 0px 4px 4px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    margin-bottom: 72px;
+    max-width: 264px;
+}
+
+.name-profession {
+    padding: 32px 0;
+}
+
+.title {
+    color: #2E2F42;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.section-three-list-item {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.section-three-p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.social-network {
+    display: flex;
+    gap: 24px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 8px;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-item {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.massanger-icon {
+    margin: 12px;
+    fill: #F4F4FD;
+}

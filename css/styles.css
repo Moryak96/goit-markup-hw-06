@@ -55,7 +55,7 @@ body {
 }
 
 .container {
-    max-width: 320px;
+    max-width: 296px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -80,7 +80,8 @@ body {
     padding: 16px;
 }
 
-.adress-title {
+.main-address {
+    font-style: normal;
     display: none;
 }
 
@@ -108,6 +109,10 @@ body {
 
 @media (max-width: 767px) {
 
+    .container {
+        max-width: 320px;
+    }
+
     .mobile-menu-open-btn {
         background-color: transparent;
         border: none;
@@ -120,7 +125,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 999999;
         width: 100%;
         height: 100%;
         background-color: #FFF;
@@ -243,7 +248,7 @@ body {
         display: none;
     }
 
-    .mobile-menu-wrapper {
+    .mobile-menu-page {
         display: none;
     }
 
@@ -256,7 +261,7 @@ body {
         margin-right: 120px;
     }
 
-    .address-title {
+    .main-address {
         display: flex;
     }
 
@@ -281,7 +286,7 @@ body {
         color: #404BBF;
     }
 
-    .address-title {
+    .main-address {
         font-style: normal;
     }
 
@@ -323,7 +328,7 @@ body {
         max-width: 1158px;
     }
 
-    .header-logo {
+    .head-logo {
         margin-right: 76px;
     }
 
@@ -334,9 +339,14 @@ body {
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .page-adress {
+    .data:hover,
+    .data:focus {
+        color: #404BBF;
+    }
+
+    .main-data {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         gap: 40px;
     }
 
@@ -360,7 +370,6 @@ body {
     rgba(46, 47, 66, 0.70)), 
     url(../images/party-mobile.jpg);
     background-size: cover;
-    max-width: 320px;
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
@@ -445,11 +454,6 @@ screen and (min-device-pixel-raito: 2) {
 
 @media screen and (min-width: 1158px) {
 
-    .section {
-        margin-bottom: 120px;
-        margin-top: 120px;
-    }
-
     .section-one {
         padding: 188px 0;
         background-image: linear-gradient(
@@ -513,7 +517,6 @@ screen and (min-device-pixel-raito: 2) {
 
 .section-two-items {
     width: 288px;
-    margin-bottom: 72px;
 }
 
 .last-items{
@@ -528,10 +531,11 @@ screen and (min-device-pixel-raito: 2) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        row-gap: 72px;
     }
 
     .section-two-items {
-        flex-basis: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 72px) / 4);
     }
 
     .section-two-title {
@@ -539,7 +543,7 @@ screen and (min-device-pixel-raito: 2) {
         text-align: left;
     }
 
-    .section-two-p {
+    .section-two-items {
         width: 356px;
     }
 }
@@ -603,7 +607,7 @@ screen and (min-device-pixel-raito: 2) {
     color: #2E2F42;
     text-align: center;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -616,7 +620,7 @@ screen and (min-device-pixel-raito: 2) {
 .our-team-title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .section-three-list {
@@ -625,6 +629,10 @@ screen and (min-device-pixel-raito: 2) {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     margin-bottom: 72px;
     max-width: 264px;
+}
+
+.last-item {
+    margin-bottom: auto;
 }
 
 .name-profession {
@@ -685,12 +693,13 @@ screen and (min-device-pixel-raito: 2) {
 /* +++ Section 3 (Tablet) */
 
 @media screen and (min-width: 768px) {
-    .section-four-portfolio {
+
+    .our-team-title {
         gap: 24px;
         row-gap: 64px;
     }
 
-    .section-four-items {
+    .section-three-list {
         margin-bottom: 0;
     }
 
@@ -721,6 +730,13 @@ screen and (min-device-pixel-raito: 2) {
 
 .section-four-title {
     margin-bottom: 72px;
+    color: #2E2F42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 
 .section-four-portfolio {
@@ -738,39 +754,21 @@ screen and (min-device-pixel-raito: 2) {
 .section-four-list-item {
     margin-bottom: 8px;
     text-align: start;
+    color: #2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
-.section-four-items {
-    width: 288px;
-    background-color: #FFF;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
-
-/* +++ Section 4 (Mobile) +++ */
-
-.box-content {
-    display: none;
-}
-
-.section-four-title {
-    margin-bottom: 72px;
-}
-
-.section-four-portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-}
-
-.applications {
-    padding: 32px 16px;
-    border: 1px solid #E7E9FC;
-    border-top: none;
-}
-
-.section-four-list-item {
-    margin-bottom: 8px;
-    text-align: start;
+.section-four-p {
+    color: #434455;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .section-four-items {
@@ -957,7 +955,7 @@ screen and (min-device-pixel-raito: 2) {
     margin-top: 16px;
 }
 
-.icon-svg {
+.icon-footer {
     fill: #F4F4FD;
     margin-left: 16px;
 }
@@ -1137,14 +1135,14 @@ screen and (min-device-pixel-raito: 2) {
     margin-bottom: 16px;
 }
 
-.modal-form-label {
-    display: block;
+.form-label-checkbox {
+    display: flex;
     color: #8E8F99;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    margin-bottom: 4px;
+    align-items: center;
 }
 
 .input-div {
@@ -1198,17 +1196,15 @@ screen and (min-device-pixel-raito: 2) {
     letter-spacing: 0.04em;
     display: flex;
     align-items: center;
-
 }
 
 .modal-form-link {
     color: #4D5AE5;
-
 }
 
 .checkbox-container {
     margin-bottom: 24px;
-
+    display: flex;
 }
 
 .modal-form-checkbox-span {

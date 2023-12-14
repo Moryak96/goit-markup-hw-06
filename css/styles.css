@@ -42,10 +42,6 @@ body {
     background-color: #FFFFFF;
 }
 
-address {
-    font-style: normal;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;

@@ -74,7 +74,7 @@ address {
     display: none;
 }
 
-.main-address {
+.main-adress {
     display: none;
 }
 
@@ -255,7 +255,7 @@ address {
         margin-right: 120px;
     }
 
-    .main-address {
+    .main-adress {
         display: flex;
         font-style: normal;
     }
